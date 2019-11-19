@@ -1,28 +1,28 @@
 # Your TextAnalyzer model code will go here.
-class TextAnalyzer 
-  attr_reader :text 
+class TextAnalyzer
+  attr_reader :text
 
-  def initialize(text) 
-    @text = text.downcase 
-  end 
+  def initialize(text)
+    @text = text.downcase
+  end
 
-  def count_of_words 
+  def count_of_words
     words = text.split(" ")
-    words.count 
-  end 
+    words.count
+  end
 
-  def count_of_vowels 
+  def count_of_vowels
     text.scan(/[aeiou]/).count
-  end 
+  end
 
-  def count_of_consonants 
-    text.scan(/[bcdfghjklmnpqrstvwxyz]/).count 
-  end 
+  def count_of_consonants
+    text.scan(/[bcdfghjklmnpqrstvwxyz]/).count
+  end
 
-  def most_used_letters 
+  def most_used_letters
     s1 = text.gsub(/[^a-z]/, '')
     arr = s1.split('')
-    arr1 = arr.uniq 
+    arr1 = arr.uniq
     arr2 = {}
-  end 
+  end
 end 
